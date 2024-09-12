@@ -61,7 +61,6 @@ group :test do
   gem "rspec-rails"
   gem "factory_bot_rails"
   gem "simplecov", "~> 0.22"
-  gem "standardrb", "1.0.1"
   gem "webmock", "~> 3.14"
   gem "database_cleaner"
   gem "axe-core-rspec"
@@ -72,9 +71,13 @@ gem "sassc-rails"
 gem "geoblacklight", github: "geoblacklight/geoblacklight", branch: "main"
 
 group :development, :test do
-  gem "solr_wrapper", ">= 0.3"
+  gem "rswag-specs"
+  gem "standardrb"
 end
+
 gem "rsolr", ">= 1.0", "< 3"
+gem "rswag-api"
+gem "rswag-ui"
 gem "bootstrap", "~> 5.3"
 gem "devise"
 gem "devise-guests", "~> 0.8"
