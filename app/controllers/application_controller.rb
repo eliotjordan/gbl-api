@@ -5,10 +5,10 @@ class ApplicationController < ActionController::Base
 
   # Only allow modern browsers supporting webp images, web push, badges, import maps, CSS nesting, and CSS :has.
   allow_browser versions: :modern
-        before_action :allow_geoblacklight_params
+  before_action :allow_geoblacklight_params
 
-        def allow_geoblacklight_params
-          # Blacklight::Parameters will pass these to params.permit
-          blacklight_config.search_state_fields.append(Settings.GBL_PARAMS)
-        end
+  def allow_geoblacklight_params
+    # Blacklight::Parameters will pass these to params.permit
+    blacklight_config.search_state_fields.append(Settings.GBL_PARAMS)
+  end
 end

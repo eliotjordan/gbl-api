@@ -1,0 +1,4 @@
+extend_config:
+  .rubocop.yml
+
+format: progress
