@@ -57,7 +57,16 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+  gem "rails-controller-testing"
+  gem "rspec-rails"
+  gem "factory_bot_rails"
+  gem "simplecov", "~> 0.22"
+  gem "standardrb", "1.0.1"
+  gem "webmock", "~> 3.14"
+  gem "database_cleaner"
+  gem "axe-core-rspec"
 end
+
 gem "blacklight", "~> 8.0"
 gem "sassc-rails"
 gem "geoblacklight", github: "geoblacklight/geoblacklight", branch: "main"
