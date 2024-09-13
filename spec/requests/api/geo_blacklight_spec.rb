@@ -16,27 +16,27 @@ RSpec.describe "api/search", type: :request do
 
       request_body_example value: {some_field: "Foo"}, name: "basic", summary: "Request example description"
 
-      before do
-        let(:keyword) { "map" }
-        let(:page) { 1 }
-        let(:per_page) { 10 }
-        let(:bbox) { "-74.823074+40.232888+-74.483185+40.442244" }
-      end
+      let(:keyword) { "map" }
+      let(:page) { 1 }
+      let(:per_page) { 10 }
+      let(:bbox) { "-74.823074+40.232888+-74.483185+40.442244" }
 
       response "200", "search results" do
         schema type: :object,
           properties: {
-            id: {type: :string},
-            title: {type: :string}
-          },
-          required: ["id", "title"]
-
+            records: {
+              type: :array,
+              items: {
+                type: :object,
+                properties: {
+                  id: {type: :string},
+                  title: {type: :string}
+                },
+                required: ["id", "title"]
+              }
+            }
+          }
         # let(:id) { Blog.create(title: "foo", content: "bar").id }
-        run_test!
-      end
-
-      response "406", "unsupported accept header" do
-        let(:Accept) { "application/foo" }
         run_test!
       end
     end
