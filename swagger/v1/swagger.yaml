@@ -4,56 +4,51 @@ info:
   title: API V1
   version: v1
 paths:
-  "/api/seach/{id}":
+  "/api/v1/search":
     get:
-      summary: Retrieves a blog
+      summary: Searches records
       tags:
-      - Blogs
-      - Another Tag
+      - Search
       parameters:
-      - name: id
-        in: path
-        required: true
+      - name: keyword
+        in: query
+        description: Search by keyword
+        schema:
+          type: string
+      - name: page
+        in: query
+        description: Page of records to return
+        schema:
+          type: integer
+      - name: per_page
+        in: query
+        description: Max records per page
+        schema:
+          type: integer
+      - name: bbox
+        in: query
+        description: 'Bounding box to search: west+south+east+north'
         schema:
           type: string
       responses:
         '200':
-          description: blog found
+          description: search results
           content:
             application/json:
               schema:
                 type: object
                 properties:
                   id:
-                    type: integer
-                  title:
                     type: string
-                  content:
+                  title:
                     type: string
                 required:
                 - id
                 - title
-                - content
-            application/xml:
-              schema:
-                type: object
-                properties:
-                  id:
-                    type: integer
-                  title:
-                    type: string
-                  content:
-                    type: string
-                required:
-                - id
-                - title
-                - content
-        '404':
-          description: blog not found
         '406':
           description: unsupported accept header
 servers:
-- url: https://{defaultHost}
+- url: "{defaultHost}"
   variables:
     defaultHost:
-      default: www.example.com
+      default: http://localhost:3000
