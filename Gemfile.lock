@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/geoblacklight/geoblacklight.git
-  revision: c787ed52ee352fd7f4c3104b746df9a5c0c3edce
+  revision: 7d8804b9bb7cdac7f71fc6e46a7af8d520d6dbac
   branch: main
   specs:
     geoblacklight (5.0.0.pre.alpha.10)
@@ -186,9 +186,9 @@ GEM
       logger
     faraday-net_http (3.3.0)
       net-http
-    faraday-net_http_persistent (2.1.0)
+    faraday-net_http_persistent (2.2.0)
       faraday (~> 2.5)
-      net-http-persistent (~> 4.0)
+      net-http-persistent (>= 4.0.4, < 5)
     faraday-retry (2.2.1)
       faraday (~> 2.0)
     ffi (1.17.0)
@@ -210,7 +210,7 @@ GEM
     globalid (1.2.1)
       activesupport (>= 6.1)
     hashdiff (1.1.1)
-    i18n (1.14.5)
+    i18n (1.14.6)
       concurrent-ruby (~> 1.0)
     ice_nine (0.11.2)
     importmap-rails (2.0.1)
