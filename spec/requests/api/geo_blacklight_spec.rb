@@ -18,7 +18,7 @@ RSpec.describe "api/search", type: :request do
 
       let(:keyword) { "map" }
       let(:page) { 1 }
-      let(:per_page) { 10 }
+      let(:per_page) { 2 }
       let(:bbox) { "-74.823074+40.232888+-74.483185+40.442244" }
 
       response "200", "search results" do
@@ -36,8 +36,11 @@ RSpec.describe "api/search", type: :request do
               }
             }
           }
-        # let(:id) { Blog.create(title: "foo", content: "bar").id }
-        run_test!
+        run_test! do |response|
+          data = JSON.parse(response.body)
+          expect(data["records"].count).to eq 2
+          expect(data["records"].first["id"]).to eq "princeton-1r66j405w"
+        end
       end
     end
   end
