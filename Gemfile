@@ -34,7 +34,7 @@ group :test do
   gem "rspec-rails"
   gem "selenium-webdriver"
   gem "simplecov", "~> 0.22"
-  gem "webmock", "~> 3.14"
+  gem "webmock", "~> 3.24"
 end
 
 group :development, :test do
