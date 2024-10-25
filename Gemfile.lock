@@ -109,14 +109,15 @@ GEM
     bcrypt (3.1.20)
     bigdecimal (3.1.8)
     bindex (0.8.1)
-    blacklight (8.3.0)
+    blacklight (8.5.1)
       globalid
       i18n (>= 1.7.0)
       jbuilder (~> 2.7)
       kaminari (>= 0.15)
       ostruct (>= 0.3.2)
       rails (>= 6.1, < 8)
-      view_component (>= 2.66, < 4)
+      view_component (>= 2.74, < 4)
+      zeitwerk
     bootsnap (1.18.4)
       msgpack (~> 1.2)
     bootstrap (5.3.3)
@@ -210,7 +211,7 @@ GEM
     globalid (1.2.1)
       activesupport (>= 6.1)
     hashdiff (1.1.1)
-    i18n (1.14.5)
+    i18n (1.14.6)
       concurrent-ruby (~> 1.0)
     ice_nine (0.11.2)
     importmap-rails (2.0.1)
@@ -218,7 +219,7 @@ GEM
       activesupport (>= 6.0.0)
       railties (>= 6.0.0)
     io-console (0.7.2)
-    irb (1.14.0)
+    irb (1.14.1)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
     jbuilder (2.12.0)
@@ -242,7 +243,7 @@ GEM
     language_server-protocol (3.17.0.3)
     lint_roller (1.1.0)
     logger (1.6.1)
-    loofah (2.22.0)
+    loofah (2.23.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
     mail (2.8.1)
@@ -265,7 +266,7 @@ GEM
       uri
     net-http-persistent (4.0.4)
       connection_pool (~> 2.2)
-    net-imap (0.4.16)
+    net-imap (0.5.0)
       date
       net-protocol
     net-pop (0.1.2)
@@ -293,7 +294,7 @@ GEM
     puma (6.4.2)
       nio4r (~> 2.0)
     racc (1.8.1)
-    rack (3.1.7)
+    rack (3.1.8)
     rack-proxy (0.7.7)
       rack
     rack-session (2.0.0)
@@ -466,8 +467,8 @@ GEM
     unicode-display_width (2.5.0)
     uri (0.13.1)
     useragent (0.16.10)
-    view_component (3.14.0)
-      activesupport (>= 5.2.0, < 8.0)
+    view_component (3.19.0)
+      activesupport (>= 5.2.0, < 8.1)
       concurrent-ruby (~> 1.0)
       method_source (~> 1.0)
     virtus (2.0.0)
@@ -492,7 +493,7 @@ GEM
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
-    webrick (1.8.1)
+    webrick (1.8.2)
     websocket (1.2.11)
     websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
@@ -507,7 +508,7 @@ PLATFORMS
 
 DEPENDENCIES
   axe-core-rspec
-  blacklight (~> 8.0)
+  blacklight (~> 8.5)
   bootsnap
   bootstrap (~> 5.3)
   brakeman
