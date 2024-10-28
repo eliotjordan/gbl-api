@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-gem "blacklight", "~> 8.0"
+gem "blacklight", "~> 8.6"
 gem "bootsnap", require: false
 gem "bootstrap", "~> 5.3"
 gem "devise"
