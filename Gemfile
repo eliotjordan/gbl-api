@@ -41,5 +41,5 @@ group :development, :test do
   gem "brakeman", require: false
   gem "debug", platforms: %i[mri mswin mswin64 mingw x64_mingw], require: "debug/prelude"
   gem "rswag-specs"
-  gem "standard", "~> 1.40"
+  gem "standard", "~> 1.43"
 end
